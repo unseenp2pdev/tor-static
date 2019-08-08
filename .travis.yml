@@ -31,10 +31,11 @@ script:
   - ln -s `pwd`  $GOPATH/src/github.com/cretz/
   - go test -v build_test.go -tor.verbose
 
-after_script:
-  - go run build.go package-libs
+#after_script:
+#  - go run build.go package-libs
 
 after_success:
+  - go run build.go package-libs
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then mv libs.tar.gz tor-static-linux-amd64.tar.gz; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then mv libs.tar.gz tor-static-darwin-amd64.tar.gz; fi
 
