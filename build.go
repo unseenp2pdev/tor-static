@@ -373,6 +373,8 @@ func packageLibs() error {
 			}
 		}
 	}
+	// Also copy over tor portal executable file
+	copyFile("tor/src/app/tor")
 	// Also copy over tor_api.h
 	return copyFile("tor/src/feature/api/tor_api.h")
 }
