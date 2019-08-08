@@ -28,6 +28,7 @@ before_script:
 
 script:
   - go get -u github.com/cretz/bine/tor
+  - ln -s `pwd`  $GOPATH/src/github.com/cretz/
   - go test -v build_test.go -tor.verbose
 
 after_script:
