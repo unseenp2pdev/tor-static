@@ -47,5 +47,5 @@ deploy:
   skip_cleanup: true
   draft: true
   on:
-    repo: cretz/tor-static
+    repo:  unsenep2pdev/tor-static
     tags: true
