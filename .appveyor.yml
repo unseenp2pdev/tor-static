@@ -21,7 +21,7 @@ before_build:
 
 build_script:
   - set MSYSTEM=MINGW64
-  - bash -lc "export PATH=/mingw64/bin:$PATH && cd /c/gopath/src/github.com/cretz/tor-static && /c/go/bin/go run build.go build-all"
+  - bash -lc "export PATH=/mingw64/bin:$PATH && cd /c/gopath/src/github.com/cretz/tor-static && /c/go/bin/go run build.go -verbose build-xz"
 
 test_script:
   - set PATH=C:\msys64\mingw64\bin;%PATH%
