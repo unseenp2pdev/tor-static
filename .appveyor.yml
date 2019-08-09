@@ -34,17 +34,14 @@ after_build:
   - cp libs.zip tor-static-windows-amd64.zip
 
 
-artifacts:
-  - path: tor-static-windows-amd64.zip
 
-
-#deploy:
-#  description: 'New tor-static release'
-#  provider: GitHub
-#  auth_token:
-#    secure: 6FeJJsz3att0ChUBBFt+Llk8vr32vvZVDbkicQfpRn0mJrome0mIPbkLbH2J5ejC
-#  artifact: tor-static-windows-amd64.zip
-#  draft: true
-#  on:
-#   branch: master
- #   APPVEYOR_REPO_TAG: true
+deploy:
+  description: 'New tor-static release'
+  provider: GitHub
+  auth_token:
+    secure: 6FeJJsz3att0ChUBBFt+Llk8vr32vvZVDbkicQfpRn0mJrome0mIPbkLbH2J5ejC
+  artifact: tor-static-windows-amd64.zip
+  draft: true
+  on:
+   branch: master
+   APPVEYOR_REPO_TAG: true
